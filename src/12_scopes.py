@@ -34,3 +34,31 @@ def outer():
 
 
 outer()
+
+
+def scope_test():
+    def do_local():
+        spam = "local spam"
+        # local assignment (default) didn’t change scope_test’s binding of spam
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"
+        # nonlocal assignment changed scope_test’s binding of spam
+
+    def do_global():
+        global spam
+        spam = "global spam"
+        # global assignment changed the module-level binding
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+
+scope_test()
+print("In global scope:", spam)
