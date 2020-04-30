@@ -31,3 +31,4 @@ print("x is %2d, y is %23f, z is %s" % (x, y, z))
 print("x = {}, y = {}, z is {}".format(x, y, z))
 
 # Finally, print the same thing using an f-string
+print(f"{x}, {y}, {z}")
