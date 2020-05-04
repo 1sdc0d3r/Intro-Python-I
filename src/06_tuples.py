@@ -1,6 +1,10 @@
+#
+#! A Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+#! A Set is a collection which is unordered and unindexed. No duplicate members.
+
 """
 Python tuples are sort of like lists, except they're immutable and
-are usually used to hold heterogenous data, as opposed to lists
+are usually used to hold heterogeneous data, as opposed to lists
 which are typically used to hold homogenous data. Tuples use
 parenthesis instead of square brackets.
 
@@ -49,3 +53,26 @@ print_tuple(t)  # Prints 1 2 5 7 99, one per line
 u = (1,)  # What needs to be added to make this work? #? add a comma?
 
 print_tuple(u)
+
+print("------------------------------------------")
+
+fruits = ('Apples', 'Oranges', 'Pears', 'Mangos')
+fruits2 = ("Apples",)  # single value needs trailing comma
+print("fruit tuple", fruits)
+
+print("------------------------------------------")
+#! Sets
+fruits_set = {'Apples', 'Oranges', 'Pears'}
+print(fruits_set)
+
+# check if in set
+print("Apples" in fruits_set)
+
+fruits_set.add("Mango")
+print("add", fruits_set)
+
+fruits_set.remove("Mango")
+print("remove", fruits_set)
+
+fruits_set.clear()
+print("clear", fruits_set)

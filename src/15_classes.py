@@ -52,3 +52,41 @@ geocache1 = Geocache("Newberry Views", 1.5, 2, 44.052137, -121.41556)
 
 # Print it--also make this print more nicely
 print(geocache1)
+
+
+print("---------------------")
+
+
+class User:
+    def __init__(self, name, email, age):
+        self.name = name
+        self.email = email
+        self.age = age
+
+    def greeting(self):
+        return f'My name is {self.name} and I am {self.age}'
+
+    def has_birthday(self):
+        self.age += 1
+
+
+class Customer(User):
+    def __init__(self, name, email, age):
+        super().__init__(name, email, age)
+        self.balance = 0
+
+    def set_balance(self, balance):
+        self.balance = balance
+
+    def greeting(self):
+        return f'My name is {self.name} and I am {self.age} and my balance is {self.balance}'
+
+
+jack = User('Jack Barry', "jack@testing.com", 27)
+print(jack.has_birthday())
+print(jack.greeting())
+
+barry = Customer("Barry Jack", "test@test.com", 50)
+barry.set_balance(500)
+
+print(barry.greeting())

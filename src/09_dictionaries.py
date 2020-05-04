@@ -1,3 +1,5 @@
+#
+#! A Dictionary is a colletion which is unordered, changeable, and indexed. No duplicate members
 """
 Dictionaries are Python's implementation of associative arrays.
 There's not much different with Python's version compared to what
@@ -52,3 +54,32 @@ for i in waypoints:
 for index in range(len(waypoints)):
     for key in waypoints[index]:
         print(waypoints[index][key])
+
+print("-----------------------------")
+
+person = {
+    'first_name': "John",
+    'last_name': "Doe",
+    'age': 42
+}
+print(person)
+print(person["first_name"])
+print(person.get("last_name"))
+
+person['phone'] = "555-555-5555"
+
+print("keys", person.keys())
+print("items", person.items())
+
+person2 = person.copy()
+person2['city'] = "Ogden"
+print("copy/add", person2)
+
+del(person["age"])
+person.pop("phone")
+print("delete", person)
+
+person.clear()
+print("clear", person)
+
+print("length", len(person2))

@@ -12,10 +12,9 @@ import os
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-with open("src/foo.txt", "r") as foo:
+with open("foo.txt", "r") as foo:
     # print(foo.read())
-    fooTxt = foo.read()
-    print(fooTxt)
+    print('read')
 
 #! r=read
 #! r+=read/write
@@ -28,15 +27,36 @@ with open("src/foo.txt", "r") as foo:
     # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-with open("src/bar.txt", "w") as bar:
+with open("bar.txt", "w") as bar:
     bar.write("Line 1\n")
     bar.write("Line 2\n")
     bar.write("Line 3\n")
 
-with open("src/bar.txt", "a") as bar:
+with open("bar.txt", "a") as bar:
     bar.write("Line 4\n")
     bar.write("Line 5\n")
     bar.write("Line 6")
 
-with open("src/bar.txt", "r") as bar:
-    print(bar.read())
+with open("bar.txt", "r") as bar:
+    # print(bar.read())
+    print("read")
+
+# * creates file if not exits
+myFile = open("myFile.txt", "w")
+
+print("Name: '", myFile.name)
+print("Is CLosed: '", myFile.closed)
+print("Opening Mode: '", myFile.mode)
+
+# * write to file
+myFile.write("I love Python")
+myFile.write(" and Javascript")
+myFile.close()
+
+# * Append to file
+myFile = open("myFile.txt", "a")
+myFile.write(" I also like Javascript")
+
+# * Read from file
+myFile = open("myFile.txt", "r+")
+print(myFile.read(100))
