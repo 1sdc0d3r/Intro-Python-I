@@ -62,6 +62,11 @@ person = {
     'last_name': "Doe",
     'age': 42
 }
+
+for key, value in person.items():
+    print(key, value)
+
+
 print(person)
 print(person["first_name"])
 print(person.get("last_name"))

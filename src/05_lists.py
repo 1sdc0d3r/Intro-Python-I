@@ -54,7 +54,9 @@ print("mult x", x)
 
 fruits = ["Apples", "Oranges", "Pears", "Mangos"]
 
-print("--------------------------------------------")
+
+print("-" * 50)
+
 print("fruits", fruits)
 
 fruits.reverse()
@@ -65,3 +67,27 @@ print("sort", fruits)
 
 fruits.sort(reverse=True)
 print("reverse sort", fruits)
+
+
+# ! 2d Lists
+print("-" * 50)
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix2 = matrix.copy()  # ? WHY IS THIS CHANGING THE MATRIX 2 ON MODIFICATIONS
+matrix[0][1] = 20
+print(matrix[0][1])  # 20
+for row in matrix:
+    for num in row:
+        print(num)
+print(matrix2)
+
+uniques = set()
+for row in matrix:
+    for num in row:
+        uniques.add(num)
+print(uniques)

@@ -54,19 +54,24 @@ u = (1,)  # What needs to be added to make this work? #? add a comma?
 
 print_tuple(u)
 
-print("------------------------------------------")
+
+print("-" * 50)
+
 
 fruits = ('Apples', 'Oranges', 'Pears', 'Mangos')
 fruits2 = ("Apples",)  # single value needs trailing comma
 print("fruit tuple", fruits)
 
-print("------------------------------------------")
+
+print("-" * 50)
+
 #! Sets
 fruits_set = {'Apples', 'Oranges', 'Pears'}
 print(fruits_set)
-
+a, o, p = fruits_set
+print(a, o, p)
 # check if in set
-print("Apples" in fruits_set)
+print(a in fruits_set)
 
 fruits_set.add("Mango")
 print("add", fruits_set)

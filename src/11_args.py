@@ -49,13 +49,14 @@ print(fn(a))    # Should print 22
 
 def f3(arg, *args):
     if (args):
-        return sum(args)
+        return arg + sum(args)
     else:
         return arg+1
 
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
+print(f3(8, 2, 10))     # Should print 20
 
 
 # Write a function f4 that accepts an arbitrary number of keyword arguments and

@@ -3,5 +3,5 @@
 
 # YOUR CODE HERE
 print(2 ** 5)
-num = (2 ** 5)
-print(num)
+print(3+5)
+print(3-5)

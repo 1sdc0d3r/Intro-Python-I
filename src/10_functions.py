@@ -6,8 +6,8 @@ def is_even(num):
         pass
 
 
-num = 12
-# num = int(input("Enter a number: "))
+# num = 12
+num = int(input("Enter a number: "))
 print(is_even(num))
 
 
@@ -19,5 +19,5 @@ def even_odd(num):
         return "Odd"
 
 
-# num = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 print(even_odd(num))
